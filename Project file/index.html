@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" >
+    
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="" class="logo">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                Mannu Signature Bites
+            </a>
+            <div class="search">
+                <input type="text" class="search-text" placeholder="search food..">
+                <button class="btn-search">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="login">
+                <i  id="login-icon"class="fa-regular fa-user"></i>
+                
+                login
+
+            </div>
+            <div class="location">
+                <i id="location-icon" class="fa-solid fa-location-dot"></i>
+                Bangalore
+            </div>
+            <div class="box">
+                
+
+                <div class="cart-count">0</div>
+                
+              
+                <ion-icon name="cart" id="cart-icon"></ion-icon>
+               
+                
+            </div>
+            
+            
+            
+            <div class="nav-cart" >
+                <div class="cart-title">cart items</div>
+                <div class="cart-content">
+
+
+<!---
+                    <div class="cart-box">
+                        <img src="pizza/pizza 1.jpg" class="cart-piz" width="100" height="100">
+                        <div class="detail-box">
+                            <div class="cart-piz-title">Veg Extravaganza</div>
+                            <div class="price-box">
+                                <div class="cart-price">Rs.250</div>
+                                <div class="cart-amt">Rs.250</div>
+                            </div>
+                            <input type="number" value="1" class="cart-quantity">
+                        </div>
+                        <ion-icon name="trash" class="cart-remove"></ion-icon>
+
+
+                    </div>
+                    
+                    <div class="cart-box">
+                        <img src="pizza/pizza 2.jpg" class="cart-piz" width="100" height="100">
+                        <div class="detail-box">
+                            <div class="cart-piz-title">Veg Supreme Pizza</div>
+                            <div class="price-box">
+                                <div class="cart-price">Rs.250</div>
+                                <div class="cart-amt">Rs.250</div>
+                            </div>
+                            <input type="number" value="1" class="cart-quantity">
+                        </div>
+                        <ion-icon name="trash" class="cart-remove"></ion-icon>
+                        
+
+
+                    </div>
+
+
+                    -->
+                </div>
+                
+                    
+                    <div  class="total">
+                        <div class="total-title">Total :</div>
+                        <div class="total-price">Rs.0</div>
+                    </div>
+
+                    <button class="btn-buy">Place Order</button>
+
+                    <ion-icon name="close" id="cart-close"></ion-icon>
+
+
+
+
+
+
+                
+            </div>
+           
+        </div>
+        
+    </header>
+    <div class="menu-box">
+        <h3 class="menu-text">Delicious Items...</h3>
+        <div class="shop-content">
+            <div class="food-icon icon-clicked"
+            data-filter="pizza" >
+                <div class="food-menu">
+                    <div class="menu-item" data-filter="pizza">
+                      <img src="pizza/pizza 10.png" alt="Biryani" width="100" height="100">
+                      <p>Pizza</p>
+                    </div>
+                    <div class="menu-item" data-filter="burger">
+                      <img src="burger/burger 10.png" alt="Pizzas" width="90" height="90">
+                      <p>Burger</p>
+                    </div>
+                    <div class="menu-item" data-filter="momos">
+                      <img src="momos/momos.webp" alt="Burgers" width="100" height="100">
+                      <p>Momos</p>
+                    </div>
+                    <div class="menu-item" data-filter="roll">
+                      <img src="rolls/veg roll 11.png" alt="Cakes" width="100" height="100">
+                      <p>Rolls</p>
+                    </div>
+                    <div class="menu-item" data-filter="french fries">
+                        <img src="french fries/french fries 2.png" alt="fries" width="100" height="100">
+                        <p>French Fries</p>
+                    </div>
+                    <div class="menu-item" data-filter="smoothie">
+                      <img src="smoothie/smoothie 11.png" alt="Rolls" width="100" height="100">
+                      <p>Soomthie</p>
+                    </div>
+                    <div class="menu-item" data-filter="desert">
+                        <img src="desert/dessert 6.png" alt="Rolls" width="100" height="100">
+                        <p>Dessert</p>
+                      </div>
+
+                    
+                  
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+                   
+                    
+        <div class="container">
+        <div class="title-boxa">
+            <h2 class="titlea">Pizza</h2>
+            <ion-icon name="pizza" class="p-con"></ion-icon>
+
+        </div>
+
+
+        
+        <div class="piz-content">
+            <div class="pbox" data-item="pizza">
+                <div class="piz-pic">
+                    <img src="pizza/pizza 1.jpg" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Veg Extravaganza</h2>
+                    <span class="piz-price">Rs.250</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+    
+            
+           <div class="pbox" data-item="pizza">
+                <div class="piz-pic">
+                    <img src="pizza/pizza 2.jpg" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Veg Supreme Pizza</h2>
+                    <span class="piz-price">Rs.200</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="pizza">
+                <div class="piz-pic">
+                    <img src="pizza/pizza 11.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Panner Tandoori Pizza</h2>
+                    <span class="piz-price">Rs.350</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="pizza">
+                <div class="piz-pic">
+                    <img src="pizza/pizza 4.jpg" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Farmhouse Pizza</h2>
+                    <span class="piz-price">Rs.300</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="pizza">
+                <div class="piz-pic">
+                    <img src="pizza/pizza 12.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Paneer Tikka Pizza</h2>
+                    <span class="piz-price">Rs.350</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="pizza">
+                <div class="piz-pic">
+                    <img src="pizza/pizza 6.jpg" class="piz-1" width="200" height="180">
+                    <h2 class="piz-title">Onion & Mushroom Pizza</h2>
+                    <span class="piz-price">Rs.250</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+    
+            
+            <div class="pbox" data-item="pizza">
+                <div class="piz-pic">
+                    <img src="pizza/pizza 7.jpg" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Margherita pizza</h2></ion-icon>
+                    <span class="piz-price">Rs.250</span>
+                    <ion-icon name="cart-outline" class="add-cart"  ></ion-icon>
+                </div>
+            </div>
+
+            <div class="pbox" data-item="pizza">
+                <div class="piz-pic">
+                    <img src="pizza/pizza 10.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Veggie Almond pizza</h2>
+                    <span class="piz-price">Rs.450</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+    </div>
+    <!--burger-->
+    <div class="container">
+        <div class="title-boxb">
+            <h2 class="titlea">Burger</h2>
+            <i name="pizza" id ="burger-icon" class=" fas fa-hamburger"></i>
+            
+
+        </div>
+
+
+        
+        <div class="piz-content">
+            <div class="pbox" data-item="burger">
+                <div class="piz-pic">
+                    <img src="burger/burger 18.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Garden Glory Burger
+                    </h2>
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+    
+            
+           <div class="pbox" data-item="burger">
+                <div class="piz-pic">
+                    <img src="burger/burger 13.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Spicy Bliss</h2>
+                    <span class="piz-price">Rs.50</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="burger">
+                <div class="piz-pic">
+                    <img src="burger/burger 6.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Cheesy Mushroom Melt
+                    </h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="burger">
+                <div class="piz-pic">
+                    <img src="burger/burger 22.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Veggie Fiesta Burger</h2>
+
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="burger">
+                <div class="piz-pic">
+                    <img src="burger/burger 14.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Avocado Dream Stack</h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="burger">
+                <div class="piz-pic">
+                    <img src="burger/burger 17.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Grilled Halloumi Delight</h2>
+                    <span class="piz-price">Rs.50</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+    
+            
+            <div class="pbox" data-item="burger">
+                <div class="piz-pic">
+                    <img src="burger/burger2.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Spinach & Feta Crunch</h2>
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+            <div class="pbox" data-item="burger">
+                <div class="piz-pic">
+                    <img src="burger/burger3.jpg" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Classic Lentil Supreme
+                    </h2>
+                    <span class="piz-price">Rs.50</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+    </div>
+    <!-- momos-->
+    <div class="container">
+        <div class="title-boxb">
+            <h2 class="titlea">Momos</h2>
+            
+
+        </div>
+
+
+        
+        <div class="piz-content">
+            <div class="pbox" data-item="momos">
+                <div class="piz-pic">
+                    <img src="momos/momos 6.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">momos chat</h2>
+                    <span class="piz-price">Rs.100</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+    
+            
+           <div class="pbox" data-item="momos">
+                <div class="piz-pic">
+                    <img src="momos/momos.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">jhol momo</h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="momos">
+                <div class="piz-pic">
+                    <img src="momos/momos3.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Tandoori momo</h2>
+                    <span class="piz-price">Rs.100</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="momos">
+                <div class="piz-pic">
+                    <img src="momos/momos 7.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">panner momo</h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+
+    
+    
+            
+
+
+
+
+        </div>
+        
+
+    </div>
+    <!--rolls-->
+    <div class="containeb">
+        <div class="title-boxb">
+            <h2 class="titlea">Veg Rolls</h2>
+            
+            
+
+        </div>
+
+
+        
+        <div class="piz-content">
+            <div class="pbox" data-item="roll">
+                <div class="piz-pic">
+                    <img src="rolls/veg roll 10.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Green Wrap
+                    </h2>
+                    <span class="piz-price">Rs.50</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+    
+            
+           <div class="pbox" data-item="roll">
+                <div class="piz-pic">
+                    <img src="rolls/veg roll 11.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">spicy Garlic wrap</h2>
+                    <span class="piz-price">Rs.60</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="roll">
+                <div class="piz-pic">
+                    <img src="rolls/veg roll 17.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Spicy Tofu Crunch Roll
+                    </h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="roll">
+                <div class="piz-pic">
+                    <img src="rolls/veg roll 20.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Mediterranean Veg Roll</h2>
+
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="roll">
+                <div class="piz-pic">
+                    <img src="rolls/veg roll 3.jpg" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Tangy Thai Spring Roll
+                    </h2>
+                    <span class="piz-price">Rs.60</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="roll">
+                <div class="piz-pic">
+                    <img src="rolls/veg roll 4.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Paneer Tikka Wrap
+                    </h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+    
+            
+            <div class="pbox" data-item="roll">
+                <div class="piz-pic">
+                    <img src="rolls/veg roll 5.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Herb & Hummus Roll
+                    </h2>
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+            <div class="pbox" data-item="roll">
+                <div class="piz-pic">
+                    <img src="rolls/veg roll 6.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Teriyaki Veggie Roll
+
+                    </h2>
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+    </div>
+
+    <!--french fries-->
+    <div class="container">
+        <div class="title-boxb">
+            <h2 class="titlea">French Fries</h2>
+            
+
+        </div>
+
+
+        
+        <div class="piz-content">
+            <div class="pbox" data-item="french fies">
+                <div class="piz-pic">
+                    <img src="french fries/french fries 2.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Crispy Herb Fries
+                    </h2>
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+    
+            
+           <div class="pbox" data-item="french fies">
+                <div class="piz-pic">
+                    <img src="french fries/french fries 3.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Spicy Peri-Peri Fries</h2>
+                    <span class="piz-price">Rs.50</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="french fies">
+                <div class="piz-pic">
+                    <img src="french fries/french fries 5.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Loaded Tex-Mex Fries
+                    </h2>
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="french fies">
+                <div class="piz-pic">
+                    <img src="french fries/french fries 6.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Cheesy Garlic Fries
+                    </h2>
+                    <span class="piz-price">Rs.60</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+
+    
+    
+            
+
+
+
+
+        </div>
+        
+
+    </div>
+    <!--smoothie-->
+    <div class="container">
+        <div class="title-boxb">
+            <h2 class="titlea">Smoothie</h2>
+            
+            
+
+        </div>
+
+
+        
+        <div class="piz-content">
+            <div class="pbox" data-item="smoothie">
+                <div class="piz-pic">
+                    <img src="smoothie/smoothie 25.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">BlueBerry smoothie
+                    </h2>
+                    <span class="piz-price">Rs.120</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+    
+            
+           <div class="pbox" data-item="smoothie">
+                <div class="piz-pic">
+                    <img src="smoothie/smoothie 6.jpg" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Mango smoothie</h2>
+                    <span class="piz-price">Rs.70</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="smoothie">
+                <div class="piz-pic">
+                    <img src="smoothie/smoothie 12.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Drangon fruit smoothie
+                    </h2>
+                    <span class="piz-price">Rs.90</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="smoothie">
+                <div class="piz-pic">
+                    <img src="smoothie/smoothie 14.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">green apple smoothie</h2>
+
+                    <span class="piz-price">Rs.70</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="smoothie">
+                <div class="piz-pic">
+                    <img src="smoothie/smoothie 15.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Banana smoothie</h2>
+                    <span class="piz-price">Rs.60</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="smoothie">
+                <div class="piz-pic">
+                    <img src="smoothie/smoothie 21.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">kiwi smoothie</h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+    
+            
+            <div class="pbox" data-item="smoothie">
+                <div class="piz-pic">
+                    <img src="smoothie/smoothie 22.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">pinapple</h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+            <div class="pbox" data-item="smoothie">
+                <div class="piz-pic">
+                    <img src="smoothie/smoothie 26.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">strawberry smothie
+                    </h2>
+                    <span class="piz-price">Rs.70</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+    </div>
+    <!--desert-->
+    <div class="container">
+        <div class="title-boxb">
+            <h2 class="titlea">Dessert</h2>
+           
+            
+
+        </div>
+
+
+        
+        <div class="piz-content">
+            <div class="pbox" data-item="Dessert">
+                <div class="piz-pic">
+                    <img src="desert/dessert  3.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Chocolate Delight
+                    </h2>
+                    <span class="piz-price">Rs.30</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+    
+            
+           <div class="pbox" data-item="Dessert">
+                <div class="piz-pic">
+                    <img src="desert/dessert 1.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title"> choco starwberry vanilla melten Cream </h2>
+                    <span class="piz-price">Rs.70</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="Dessert">
+                <div class="piz-pic">
+                    <img src="desert/dessert 2.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Choco Donut
+                    </h2>
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="Dessert">
+                <div class="piz-pic">
+                    <img src="desert/dessert 4.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">molten strawberry</h2>
+
+                    <span class="piz-price">Rs.50</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="Dessert">
+                <div class="piz-pic">
+                    <img src="desert/desser 22.webp" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">RasaMalai</h2>
+                    <span class="piz-price">Rs.80</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+            
+            <div class="pbox" data-item="Dessert">
+                <div class="piz-pic">
+                    <img src="desert/dessert 6.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">vanilla</h2>
+                    <span class="piz-price">Rs.50</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+    
+    
+            
+            <div class="pbox" data-item="Dessert">
+                <div class="piz-pic">
+                    <img src="desert/dessert 20.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Redvalet </h2>
+                    <span class="piz-price">Rs.50</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+            <div class="pbox" data-item="Dessert">
+                <div class="piz-pic">
+                    <img src="desert/dessert 8.png" class="piz-1" width="200" height="200">
+                    <h2 class="piz-title">Blueberry melts
+                    </h2>
+                    <span class="piz-price">Rs.40</span>
+                    <ion-icon name="cart-outline" class="add-cart"></ion-icon>
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+    </div>
+
+
+                
+
+
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
